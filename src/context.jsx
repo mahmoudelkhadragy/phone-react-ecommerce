@@ -5,14 +5,28 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
-    products: storeProducts,
+    products: [],
     detailProduct: detailProduct
   }
+
+  componentDidMount() {
+    this.setProducts();
+  }
+
+  //to fix when we modefy on the state it modefy in data
+  setProducts = () => {
+    let tempProducts = [];
+    storeProducts.forEach(item => {
+      const singleItem = { ...item };
+      tempProducts = [...tempProducts, singleItem];
+    });
+    this.setState({ products: tempProducts });
+  };
 
   handleDetail = () => {
     console.log('hello from detail');
   }
-  addToCart = () => {
+  addToCart = (id) => {
     console.log('hello from cart');
   }
 
