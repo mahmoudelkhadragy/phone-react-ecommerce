@@ -18,7 +18,7 @@ const Details = () => {
             {/* product info */}
             <div className="row">
               <div className="col-10 mx-auto col-md-6 my-3">
-                <img className="img-fluid" src={img} alt="product image" />
+                <img className="img-fluid" src={img} alt="product" />
               </div>
               <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                 <h2>model : {title}</h2>

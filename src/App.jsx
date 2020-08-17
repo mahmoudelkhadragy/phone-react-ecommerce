@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Details from './components/Details';
-import Cart from './components/Cart';
+import Cart from './components/cart/Cart';
 import Default from './components/Default';
-// import logo from './logo.svg';
+import Modal from "./components/Modal";
 import './App.css';
 
 function App() {
@@ -18,8 +18,7 @@ function App() {
         <Route exact path="/" component={ProductList} />
         <Route component={Default} />
       </Switch>
-      {/* <h1>hello Ecommerce</h1> */}
-      {/* <i className="fab fa-apple"></i> */}
+      <Modal />
     </div>
   );
 }
